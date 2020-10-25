@@ -1,7 +1,7 @@
 # PiratesBomb
- Game C++ with ProPTIT
- Ý tưởng: Kết hợp game Gunny + PirateBomb
- ĐÃ HOÀN THÀNH:
+  Game C++ with ProPTIT
+  Ý tưởng: Kết hợp game Gunny + PirateBomb
+  ĐÃ HOÀN THÀNH:
  +) Game State Machine
  +) Resource Manager
  +) Multi layer tiled Map
@@ -12,5 +12,5 @@
 https://github.com/nlohmann/json
 +) SFML
 
-Datas: 
+ Datas: 
 https://pixelfrog-store.itch.io/pirate-bomb
