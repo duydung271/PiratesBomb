@@ -1,7 +1,7 @@
 # PiratesBomb
  Game C++ with ProPTIT
  - Ý tưởng: Kết hợp game Gunny + PirateBomb
- ĐÃ HOÀN THÀNH:
+ - ĐÃ HOÀN THÀNH:
  	+ Game State Machine
  	+ Resource Manager
  	+ Multi layer tiled Map
