@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GameManager">
+      <UniqueIdentifier>{129910f4-e6f2-42de-8a87-39bc4f46efee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject">
+      <UniqueIdentifier>{2e946008-6aea-4001-9803-59a2fa7721ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Player">
+      <UniqueIdentifier>{7e400803-09e2-4cf7-9385-3bcb2ad7efb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Components">
+      <UniqueIdentifier>{53040397-e507-4575-aeee-380ed8ac48fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\TileMap">
+      <UniqueIdentifier>{d0583952-1fd0-4cab-b49f-8ba5624dab75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameStates">
+      <UniqueIdentifier>{d3a31e4d-48cd-4802-b6c1-29a6b3eabb00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameObject\Button">
+      <UniqueIdentifier>{d62d45ab-c079-4329-8d3c-ecb9407d1476}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameManager\ResourceManager.cpp">
+      <Filter>Source Files\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStates\GameStateMachine.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStates\GameStateBase.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStates\GSIntro.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStates\GSGameplay.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStates\GSMenu.cpp">
+      <Filter>Source Files\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObject\AnimationComponent.cpp">
+      <Filter>Source Files\GameObject\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObject\MovementComponent.cpp">
+      <Filter>Source Files\GameObject\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObject\TileMap.cpp">
+      <Filter>Source Files\GameObject\TileMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameObject\GameButton.cpp">
+      <Filter>Source Files\GameObject\Button</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\Application.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameConfig.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameManager\Singleton.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameManager\ResourceManager.h">
+      <Filter>Source Files\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStates\GameStateBase.h">
+      <Filter>Source Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStates\GameStateMachine.h">
+      <Filter>Source Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStates\GSIntro.h">
+      <Filter>Source Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStates\GSGameplay.h">
+      <Filter>Source Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameStates\GSMenu.h">
+      <Filter>Source Files\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObject\PlayerBombGuy.h">
+      <Filter>Source Files\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObject\AnimationComponent.h">
+      <Filter>Source Files\GameObject\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObject\FrameData.hpp">
+      <Filter>Source Files\GameObject\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObject\MovementComponent.h">
+      <Filter>Source Files\GameObject\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObject\TileMap.h">
+      <Filter>Source Files\GameObject\TileMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameObject\GameButton.h">
+      <Filter>Source Files\GameObject\Button</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
