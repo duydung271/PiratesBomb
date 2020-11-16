@@ -10,6 +10,7 @@ enum StateTypes
 	STATE_Intro,
 	STATE_Menu,
 	STATE_Play,
+	STATE_End,
 };
 
 class GameStateMachine
@@ -37,7 +38,10 @@ public:
 	{
 		return m_pActiveState;
 	}
-
+	inline GameStateBase* NextState()const
+	{
+		return m_pNextState;
+	}
 	inline bool		NeedsToChangeState()const
 	{
 		return (m_pNextState != 0);

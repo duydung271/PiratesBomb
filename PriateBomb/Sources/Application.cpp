@@ -2,12 +2,13 @@
 
 Application::Application()
 {
-	m_Window = new sf::RenderWindow(sf::VideoMode(screenWidth, screenHeight), TileGame, sf::Style::Close);
+	m_Window = new sf::RenderWindow(sf::VideoMode(screenWidth, screenHeight), TileGame, sf::Style::Fullscreen);
 	m_Window->setVerticalSyncEnabled(false);
 	m_Window->setFramerateLimit(120);
 	GameStateMachine::GetInstance()->ChangeState(StateTypes::STATE_Intro);
 	m_Event = new sf::Event();
 	GameStateBase::setWindow(m_Window);
+	//printf("%d %d\n",m_Window->getSize().x, m_Window->getSize().y);
 }
 
 

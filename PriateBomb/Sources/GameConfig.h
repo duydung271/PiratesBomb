@@ -1,5 +1,5 @@
 #pragma once
 
-#define screenWidth 1900
-#define screenHeight 1024
-#define TileGame "Priate Bomb"
+#define screenWidth 1920
+#define screenHeight 1080
+#define TileGame "Pirate Bomb"

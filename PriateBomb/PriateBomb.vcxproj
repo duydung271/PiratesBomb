@@ -88,13 +88,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)sfml\include;%(AdditionalIncludeDirectories);$(SolutionDir)nlohmann;$(SolutionDir)nlohmann</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)sfml\include;%(AdditionalIncludeDirectories);$(SolutionDir)nlohmann;$(SolutionDir)nlohmann;$(SolutionDir)Box2D\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-system-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)sfml\lib;%(AdditionalLibraryDirectories);$(SolutionDir)Box2D\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib;Box2D.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -105,15 +105,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)sfml\include;%(AdditionalIncludeDirectories);$(SolutionDir)nlohmann;$(SolutionDir)nlohmann</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)sfml\include;%(AdditionalIncludeDirectories);$(SolutionDir)nlohmann;$(SolutionDir)nlohmann;$(SolutionDir)Box2D\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-system.lib;sfml-graphics.lib;sfml-audio.lib;sfml-network.lib;sfml-window.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)sfml\lib;%(AdditionalLibraryDirectories);$(SolutionDir)Box2D\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system.lib;sfml-graphics.lib;sfml-audio.lib;sfml-network.lib;sfml-window.lib;Box2D.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -122,11 +122,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>;$(SolutionDir)nlohmann;$(SolutionDir)nlohmann</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>;$(SolutionDir)nlohmann;$(SolutionDir)nlohmann;$(SolutionDir)Box2D\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>;$(SolutionDir)Box2D\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);Box2D.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -137,13 +139,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>;$(SolutionDir)nlohmann;$(SolutionDir)nlohmann</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>;$(SolutionDir)nlohmann;$(SolutionDir)nlohmann;$(SolutionDir)Box2D\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>;$(SolutionDir)Box2D\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);Box2D.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -151,29 +155,181 @@
     <ClCompile Include="Sources\Application.cpp" />
     <ClCompile Include="Sources\GameManager\ResourceManager.cpp" />
     <ClCompile Include="Sources\GameObject\AnimationComponent.cpp" />
+    <ClCompile Include="Sources\GameObject\AttributeComponent.cpp" />
+    <ClCompile Include="Sources\GameObject\AttributeItem.cpp" />
+    <ClCompile Include="Sources\GameObject\BackGround.cpp" />
+    <ClCompile Include="Sources\GameObject\BackTree.cpp" />
+    <ClCompile Include="Sources\GameObject\BaseCreep.cpp" />
+    <ClCompile Include="Sources\GameObject\Bomb.cpp" />
+    <ClCompile Include="Sources\GameObject\BombManager.cpp" />
+    <ClCompile Include="Sources\GameObject\BombOffState.cpp" />
+    <ClCompile Include="Sources\GameObject\BombOnState.cpp" />
+    <ClCompile Include="Sources\GameObject\Boss.cpp" />
+    <ClCompile Include="Sources\GameObject\Bullet.cpp" />
+    <ClCompile Include="Sources\GameObject\BulletBossManager.cpp" />
+    <ClCompile Include="Sources\GameObject\Cloud.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepBat.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepBatManager.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepBee.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepBeeManager.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepBlueBird.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepBlueBirdManager.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepBullet.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepManager.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepSkull.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepSkullManager.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepSunDragon.cpp" />
+    <ClCompile Include="Sources\GameObject\CreepSunDragonManager.cpp" />
+    <ClCompile Include="Sources\GameObject\DataGamePlay.cpp" />
+    <ClCompile Include="Sources\GameObject\DeadGroundState.cpp" />
+    <ClCompile Include="Sources\GameObject\DeadHitState.cpp" />
+    <ClCompile Include="Sources\GameObject\Entity.cpp" />
+    <ClCompile Include="Sources\GameObject\ExplosionEffect.cpp" />
+    <ClCompile Include="Sources\GameObject\ExplosionState.cpp" />
+    <ClCompile Include="Sources\GameObject\ExplositionState.cpp" />
+    <ClCompile Include="Sources\GameObject\FallState.cpp" />
+    <ClCompile Include="Sources\GameObject\FireState.cpp" />
     <ClCompile Include="Sources\GameObject\GameButton.cpp" />
-    <ClCompile Include="Sources\GameObject\MovementComponent.cpp" />
+    <ClCompile Include="Sources\GameObject\GroundState.cpp" />
+    <ClCompile Include="Sources\GameObject\HearBar.cpp" />
+    <ClCompile Include="Sources\GameObject\HitBoxComponent.cpp" />
+    <ClCompile Include="Sources\GameObject\HitCircleComponent.cpp" />
+    <ClCompile Include="Sources\GameObject\HitState.cpp" />
+    <ClCompile Include="Sources\GameObject\IdlePState.cpp" />
+    <ClCompile Include="Sources\GameObject\Item.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemAllowThrowBomb.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemCoolDownThrowBomb.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemCoolDownThrowBullet.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemDamgeBomb.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemDamgeBullet.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemHeart.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemJump.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemManager.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemPowerThrowBomb.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemPowerThrowBullet.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemSpeed.cpp" />
+    <ClCompile Include="Sources\GameObject\JumpAnticipation.cpp" />
+    <ClCompile Include="Sources\GameObject\JumpState.cpp" />
+    <ClCompile Include="Sources\GameObject\LayerShadow.cpp" />
+    <ClCompile Include="Sources\GameObject\Level1.cpp" />
+    <ClCompile Include="Sources\GameObject\Level2.cpp" />
+    <ClCompile Include="Sources\GameObject\Level3.cpp" />
+    <ClCompile Include="Sources\GameObject\Level4.cpp" />
+    <ClCompile Include="Sources\GameObject\Level5.cpp" />
+    <ClCompile Include="Sources\GameObject\LevelManager.cpp" />
+    <ClCompile Include="Sources\GameObject\MonsterManager.cpp" />
+    <ClCompile Include="Sources\GameObject\MouseDirect.cpp" />
+    <ClCompile Include="Sources\GameObject\MovingDirect.cpp" />
+    <ClCompile Include="Sources\GameObject\ParallexCloud.cpp" />
+    <ClCompile Include="Sources\GameObject\Player.cpp" />
+    <ClCompile Include="Sources\GameObject\Rocket.cpp" />
+    <ClCompile Include="Sources\GameObject\RunPState.cpp" />
+    <ClCompile Include="Sources\GameObject\ShadowWindow.cpp" />
+    <ClCompile Include="Sources\GameObject\ItemCoolDownTimeBomb.cpp" />
     <ClCompile Include="Sources\GameObject\TileMap.cpp" />
+    <ClCompile Include="Sources\GameObject\WaterReflect.cpp" />
+    <ClCompile Include="Sources\GameObject\World.cpp" />
     <ClCompile Include="Sources\GameStates\GameStateBase.cpp" />
     <ClCompile Include="Sources\GameStates\GameStateMachine.cpp" />
+    <ClCompile Include="Sources\GameStates\GSEnd.cpp" />
     <ClCompile Include="Sources\GameStates\GSGameplay.cpp" />
     <ClCompile Include="Sources\GameStates\GSIntro.cpp" />
     <ClCompile Include="Sources\GameStates\GSMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MoveComponent.h" />
     <ClInclude Include="Sources\Application.h" />
     <ClInclude Include="Sources\GameConfig.h" />
     <ClInclude Include="Sources\GameManager\ResourceManager.h" />
     <ClInclude Include="Sources\GameManager\Singleton.h" />
     <ClInclude Include="Sources\GameObject\AnimationComponent.h" />
+    <ClInclude Include="Sources\GameObject\AttributeComponent.h" />
+    <ClInclude Include="Sources\GameObject\AttributeItem.h" />
+    <ClInclude Include="Sources\GameObject\BackGround.h" />
+    <ClInclude Include="Sources\GameObject\BackTree.h" />
+    <ClInclude Include="Sources\GameObject\BaseCreep.h" />
+    <ClInclude Include="Sources\GameObject\BulletBossManager.h" />
+    <ClInclude Include="Sources\GameObject\CreepBatManager.h" />
+    <ClInclude Include="Sources\GameObject\CreepBeeManager.h" />
+    <ClInclude Include="Sources\GameObject\CreepBlueBird.h" />
+    <ClInclude Include="Sources\GameObject\Bomb.h" />
+    <ClInclude Include="Sources\GameObject\BombOffState.h" />
+    <ClInclude Include="Sources\GameObject\BombOnState.h" />
+    <ClInclude Include="Sources\GameObject\Bullet.h" />
+    <ClInclude Include="Sources\GameObject\Cloud.h" />
+    <ClInclude Include="Sources\GameObject\CollisionManager.h" />
+    <ClInclude Include="Sources\GameObject\CreepBat.h" />
+    <ClInclude Include="Sources\GameObject\CreepBee.h" />
+    <ClInclude Include="Sources\GameObject\CreepBlueBirdManager.h" />
+    <ClInclude Include="Sources\GameObject\CreepBullet.h" />
+    <ClInclude Include="Sources\GameObject\CreepManager.h" />
+    <ClInclude Include="Sources\GameObject\CreepSkull.h" />
+    <ClInclude Include="Sources\GameObject\CreepSkullManager.h" />
+    <ClInclude Include="Sources\GameObject\CreepSunDragon.h" />
+    <ClInclude Include="Sources\GameObject\CreepSunDragonManager.h" />
+    <ClInclude Include="Sources\GameObject\DataGamePlay.h" />
+    <ClInclude Include="Sources\GameObject\DeadHitState.h" />
+    <ClInclude Include="Sources\GameObject\DeadGroundState.h" />
+    <ClInclude Include="Sources\GameObject\Entity.h" />
+    <ClInclude Include="Sources\GameObject\ExplosionEffect.h" />
+    <ClInclude Include="Sources\GameObject\ExplosionState.h" />
+    <ClInclude Include="Sources\GameObject\ExplositionState.h" />
+    <ClInclude Include="Sources\GameObject\FallState.h" />
+    <ClInclude Include="Sources\GameObject\FireState.h" />
     <ClInclude Include="Sources\GameObject\FrameData.hpp" />
     <ClInclude Include="Sources\GameObject\GameButton.h" />
-    <ClInclude Include="Sources\GameObject\MovementComponent.h" />
-    <ClInclude Include="Sources\GameObject\PlayerBombGuy.h" />
+    <ClInclude Include="Sources\GameObject\GroundState.h" />
+    <ClInclude Include="Sources\GameObject\Boss.h" />
+    <ClInclude Include="Sources\GameObject\HearBar.h" />
+    <ClInclude Include="Sources\GameObject\HitBoxComponent.h" />
+    <ClInclude Include="Sources\GameObject\HitCircleComponent.h" />
+    <ClInclude Include="Sources\GameObject\HitState.h" />
+    <ClInclude Include="Sources\GameObject\IBomb.h" />
+    <ClInclude Include="Sources\GameObject\IBombState.h" />
+    <ClInclude Include="Sources\GameObject\IBullet.h" />
+    <ClInclude Include="Sources\GameObject\IBulletState.h" />
+    <ClInclude Include="Sources\GameObject\IdlePState.h" />
+    <ClInclude Include="Sources\GameObject\ILevel.h" />
+    <ClInclude Include="Sources\GameObject\IPlayer.h" />
+    <ClInclude Include="Sources\GameObject\IPState.h" />
+    <ClInclude Include="Sources\GameObject\Item.h" />
+    <ClInclude Include="Sources\GameObject\ItemAllowThrowBomb.h" />
+    <ClInclude Include="Sources\GameObject\ItemConfig.h" />
+    <ClInclude Include="Sources\GameObject\ItemCoolDownThrowBomb.h" />
+    <ClInclude Include="Sources\GameObject\ItemCoolDownThrowBullet.h" />
+    <ClInclude Include="Sources\GameObject\ItemCoolDownTimeBomb.h" />
+    <ClInclude Include="Sources\GameObject\ItemDamgeBomb.h" />
+    <ClInclude Include="Sources\GameObject\ItemDamgeBullet.h" />
+    <ClInclude Include="Sources\GameObject\ItemHeart.h" />
+    <ClInclude Include="Sources\GameObject\ItemJump.h" />
+    <ClInclude Include="Sources\GameObject\ItemLib.h" />
+    <ClInclude Include="Sources\GameObject\ItemManager.h" />
+    <ClInclude Include="Sources\GameObject\ItemPowerThrowBomb.h" />
+    <ClInclude Include="Sources\GameObject\ItemPowerThrowBullet.h" />
+    <ClInclude Include="Sources\GameObject\ItemSpeed.h" />
+    <ClInclude Include="Sources\GameObject\JumpAnticipation.h" />
+    <ClInclude Include="Sources\GameObject\JumpState.h" />
+    <ClInclude Include="Sources\GameObject\LayerShadow.h" />
+    <ClInclude Include="Sources\GameObject\Level1.h" />
+    <ClInclude Include="Sources\GameObject\Level2.h" />
+    <ClInclude Include="Sources\GameObject\Level3.h" />
+    <ClInclude Include="Sources\GameObject\Level4.h" />
+    <ClInclude Include="Sources\GameObject\Level5.h" />
+    <ClInclude Include="Sources\GameObject\LevelManager.h" />
+    <ClInclude Include="Sources\GameObject\MonsterManager.h" />
+    <ClInclude Include="Sources\GameObject\MouseDirect.h" />
+    <ClInclude Include="Sources\GameObject\MovingDirect.h" />
+    <ClInclude Include="Sources\GameObject\ParallexCloud.h" />
+    <ClInclude Include="Sources\GameObject\Player.h" />
+    <ClInclude Include="Sources\GameObject\BombManager.h" />
+    <ClInclude Include="Sources\GameObject\Rocket.h" />
+    <ClInclude Include="Sources\GameObject\RunPState.h" />
+    <ClInclude Include="Sources\GameObject\ShadowWindow.h" />
+    <ClInclude Include="Sources\GameObject\WaterReflect.h" />
+    <ClInclude Include="Sources\GameObject\World.h" />
     <ClInclude Include="Sources\GameObject\TileMap.h" />
     <ClInclude Include="Sources\GameStates\GameStateBase.h" />
     <ClInclude Include="Sources\GameStates\GameStateMachine.h" />
+    <ClInclude Include="Sources\GameStates\GSEnd.h" />
     <ClInclude Include="Sources\GameStates\GSGameplay.h" />
     <ClInclude Include="Sources\GameStates\GSIntro.h" />
     <ClInclude Include="Sources\GameStates\GSMenu.h" />

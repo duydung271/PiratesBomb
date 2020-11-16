@@ -4,12 +4,12 @@ Height 638
 NumFrameWidth 26
 NumFrameHeight 11
 0 Idle 26 0.1
-1 Run 14 0.1
-2 JumpAnticipation 1 0.1
+1 Run 14 0.05
+2 JumpAnticipation 1 0.05
 3 Jump 4 0.1
 4 Fall 2 0.1
-5 Ground 3 0.1
-6 Hit 8 0.1
+5 Ground 3 0.05
+6 Hit 8 0.05
 7 DeadHit 5 0.1
 8 DeadGround 4 0.1
 9 DoorIn 16 0.1

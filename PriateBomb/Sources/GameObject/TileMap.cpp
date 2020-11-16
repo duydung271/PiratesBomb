@@ -80,6 +80,27 @@ bool TileMap::Load(const std::string& nameMap)
 				quad[1].texCoords = sf::Vector2f((tu + 1) * tileSize.x, tv * tileSize.y);
 				quad[2].texCoords = sf::Vector2f((tu + 1) * tileSize.x, (tv + 1) * tileSize.y);
 				quad[3].texCoords = sf::Vector2f(tu * tileSize.x, (tv + 1) * tileSize.y);
+				if (jsTile.contains("tiles"))
+				{
+					
+					for (auto it : jsTile["tiles"])
+					{
+						if (it["id"] == tileNumber)
+						{
+							for (auto pr : it["properties"])
+							{
+								if (pr["name"] == "Visitable")
+								{
+									if (pr["value"] == false)
+									{
+										World::GetInstance()->CreateGround(b2Vec2((i + 0.5f) * tileSize.x, (j + 0.5f) * tileSize.y),b2Vec2( tileSize.x, tileSize.y));
+									}
+								}
+							}
+							break;
+						}
+					}
+				}
 			}
 		}
 		m_listVertexMap.push_back(vertexArray);

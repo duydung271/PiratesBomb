@@ -1,33 +1,9 @@
-﻿  GameButton.cpp
+﻿  GSIntro.cpp
 D:\PriateBomb\PriateBomb\Sources\GameObject\FrameData.hpp(29,21): warning C4018: '<': signed/unsigned mismatch
-D:\PriateBomb\PriateBomb\Sources\GameObject\GameButton.cpp(33,96): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-          and
-          [
-              T=float
-          ]
-D:\PriateBomb\PriateBomb\Sources\GameObject\GameButton.cpp(33,59): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-          and
-          [
-              T=float
-          ]
-  GSGameplay.cpp
+D:\PriateBomb\PriateBomb\Sources\GameStates\GameStateBase.h(7,18): warning C4091: 'extern ': ignored on left of 'StateTypes' when no variable is declared
+  GSMenu.cpp
 D:\PriateBomb\PriateBomb\Sources\GameObject\FrameData.hpp(29,21): warning C4018: '<': signed/unsigned mismatch
-D:\PriateBomb\PriateBomb\Sources\GameStates\GameStateBase.h(6,18): warning C4091: 'extern ': ignored on left of 'StateTypes' when no variable is declared
-D:\PriateBomb\PriateBomb\Sources\GameObject\TileMap.h(18,21): warning C4018: '<': signed/unsigned mismatch
-  GSIntro.cpp
-D:\PriateBomb\PriateBomb\Sources\GameObject\FrameData.hpp(29,21): warning C4018: '<': signed/unsigned mismatch
-D:\PriateBomb\PriateBomb\Sources\GameStates\GameStateBase.h(6,18): warning C4091: 'extern ': ignored on left of 'StateTypes' when no variable is declared
-  GameStateBase.cpp
-D:\PriateBomb\PriateBomb\Sources\GameObject\FrameData.hpp(29,21): warning C4018: '<': signed/unsigned mismatch
-D:\PriateBomb\PriateBomb\Sources\GameStates\GameStateBase.h(6,18): warning C4091: 'extern ': ignored on left of 'StateTypes' when no variable is declared
-D:\PriateBomb\PriateBomb\Sources\GameObject\TileMap.h(18,21): warning C4018: '<': signed/unsigned mismatch
+D:\PriateBomb\PriateBomb\Sources\GameStates\GameStateBase.h(7,18): warning C4091: 'extern ': ignored on left of 'StateTypes' when no variable is declared
+D:\PriateBomb\PriateBomb\Sources\GameStates\GSMenu.cpp(88,26): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
   Generating Code...
   PriateBomb.vcxproj -> D:\PriateBomb\Debug\PriateBomb.exe

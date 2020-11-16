@@ -1,0 +1,8 @@
+particles
+Width 1056
+Height 480
+NumFrameWidth 6
+NumFrameHeight 3
+0 Jump 6 0.05
+1 Run 6 0.05
+2 Fall 6 0.05

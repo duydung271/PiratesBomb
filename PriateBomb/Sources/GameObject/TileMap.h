@@ -3,6 +3,7 @@
 
 #include <fstream>
 #include <json.hpp>
+#include "../GameObject/World.h"
 
 using json = nlohmann::json;
 

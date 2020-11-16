@@ -2,6 +2,7 @@
 #include "GSIntro.h"
 #include "GSGameplay.h"
 #include "GSMenu.h"
+#include "GSEnd.h"
 
 sf::RenderWindow* GameStateBase::Window = nullptr;
 
@@ -33,6 +34,9 @@ GameStateBase* GameStateBase::CreateState(StateTypes stt)
 		break;
 	case STATE_Play:
 		gs = new GSGameplay();
+		break;
+	case STATE_End:
+		gs = new GSEnd();
 		break;
 	default:
 		break;

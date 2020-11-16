@@ -2,6 +2,7 @@
 #include "../GameManager/ResourceManager.h"
 #include "GameStateMachine.h"
 #include "../GameObject/AnimationComponent.h"
+#include "../GameObject/LayerShadow.h"
 
 extern StateTypes;
 class GameStateBase

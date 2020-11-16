@@ -1,0 +1,8 @@
+Bomb
+Width 1760
+Height 480
+NumFrameWidth 10
+NumFrameHeight 3
+0 BombOff 1 0.1
+1 BombOn 10 0.1
+2 Explosion 9 0.1

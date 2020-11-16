@@ -12,6 +12,9 @@
 #include <SFML/Audio.hpp>
 #include <SFML/System.hpp>
 #include "../GameObject/FrameData.hpp"
+#include "../GameObject/World.h"
+#include "../GameObject/Entity.h"
+#include "../GameObject/AnimationComponent.h"
 
 class ResourceManagers : public CSingleton<ResourceManagers>
 {

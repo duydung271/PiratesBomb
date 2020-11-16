@@ -2,6 +2,14 @@
 #include "GameStateBase.h"
 #include "../GameObject/TileMap.h"
 #include "../GameObject/GameButton.h"
+#include "../GameObject/Player.h"
+#include "../GameObject/HitCircleComponent.h"
+#include "../GameObject/Bomb.h"
+#include "../GameObject/ExplosionEffect.h"
+#include "../GameObject/BackGround.h"
+#include "../GameObject/Boss.h"
+#include "../GameObject/ItemManager.h"
+#include "../GameObject/LevelManager.h"
 
 class GSGameplay
 	:public GameStateBase
@@ -18,7 +26,15 @@ public:
 	void Update(const float& dt);
 	void Render();
 private:
-	TileMap* m_TileMap;
 	float m_currentTime;
-	GameButton* m_Button_Exit;
+	TileMap* m_TileMap;
+	b2World* m_World;
+	Player* m_Player;
+	LevelManager* m_LevelManger;
+	LayerShadow m_LayerIntro;
+	LayerShadow m_LayerLight;
+	LayerShadow m_LayerTop;
+	bool m_wasInit;
+
+	bool m_ModeTool;
 };
